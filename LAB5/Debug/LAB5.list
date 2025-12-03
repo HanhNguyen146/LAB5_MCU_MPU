@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  00020074  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00011424  00000000  00000000  0002009d  2**0
+ 12 .debug_info   00011407  00000000  00000000  0002009d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 000025fe  00000000  00000000  000314c1  2**0
+ 13 .debug_abbrev 000025e4  00000000  00000000  000314a4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000dc0  00000000  00000000  00033ac0  2**3
+ 14 .debug_aranges 00000dc0  00000000  00000000  00033a88  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000cb0  00000000  00000000  00034880  2**3
+ 15 .debug_ranges 00000cb0  00000000  00000000  00034848  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  00018eaa  00000000  00000000  00035530  2**0
+ 16 .debug_macro  00018eaa  00000000  00000000  000354f8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00010a25  00000000  00000000  0004e3da  2**0
+ 17 .debug_line   0001085d  00000000  00000000  0004e3a2  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0008e39c  00000000  00000000  0005edff  2**0
+ 18 .debug_str    0008e3c2  00000000  00000000  0005ebff  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000ed19b  2**0
+ 19 .comment      00000053  00000000  00000000  000ecfc1  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00003d28  00000000  00000000  000ed1f0  2**2
+ 20 .debug_frame  00003d28  00000000  00000000  000ed014  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -732,7 +732,7 @@ Disassembly of section .text:
  800093a:	bf00      	nop
 
 0800093c <command_parser_fsm>:
- *      Author: LENOVO
+ *      Author: hanh
  */
 
 #include "command_parser.h"
@@ -997,7 +997,7 @@ int main(void)
  8000abc:	701a      	strb	r2, [r3, #0]
 	  	  }
 	  	  // uart_communiation_fsm function
-	  	  uart_communication_fsm(hadc1, huart2);
+	  	uart_communication_fsm(hadc1, huart2);
  8000abe:	4e11      	ldr	r6, [pc, #68]	; (8000b04 <main+0xb0>)
  8000ac0:	4a0c      	ldr	r2, [pc, #48]	; (8000af4 <main+0xa0>)
  8000ac2:	ab08      	add	r3, sp, #32
@@ -1013,7 +1013,7 @@ int main(void)
  8000adc:	e885 000f 	stmia.w	r5, {r0, r1, r2, r3}
  8000ae0:	e896 000f 	ldmia.w	r6, {r0, r1, r2, r3}
  8000ae4:	f000 fb5a 	bl	800119c <uart_communication_fsm>
-  {
+	  	  if (timer_flag[0] == 1) {
  8000ae8:	e7d3      	b.n	8000a92 <main+0x3e>
  8000aea:	bf00      	nop
  8000aec:	20000160 	.word	0x20000160
@@ -2303,7 +2303,7 @@ void SystemInit (void)
  800119a:	4770      	bx	lr
 
 0800119c <uart_communication_fsm>:
- *      Author: LENOVO
+ *      Author: hanh
  */
 
 #include "uart_communication.h"

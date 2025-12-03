@@ -134,7 +134,7 @@ int main(void)
 	  		  buffer_flag = 0;
 	  	  }
 	  	  // uart_communiation_fsm function
-	  	  uart_communication_fsm(hadc1, huart2);
+	  	uart_communication_fsm(hadc1, huart2);
   }
   /* USER CODE END 3 */
 }

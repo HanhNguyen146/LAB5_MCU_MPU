@@ -15,6 +15,6 @@
 #include "stdio.h"
 #include "stdlib.h"
 
-void uart_communiation_fsm(ADC_HandleTypeDef hadc1, UART_HandleTypeDef huart2);
+void uart_communication_fsm(ADC_HandleTypeDef hadc1, UART_HandleTypeDef huart2);
 
 #endif /* INC_UART_COMMUNICATION_H_ */
