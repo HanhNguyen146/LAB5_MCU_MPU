@@ -33,7 +33,7 @@ extern uint8_t buffer_flag;
 
 // Variables to read command
 extern uint8_t command_flag;
-extern uint8_t command[MAX_BUFFER_SIZE];
+extern char command[MAX_BUFFER_SIZE];
 extern uint8_t command_index;
 
 // String to display console
